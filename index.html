@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srikaran Anand Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: an analyst's statement. A ledger-style hero of real results, then experience as dated line items, projects as exhibits. */
+:root{
+  --paper:#F3F5F7;
+  --surface:#FFFFFF;
+  --ink:#15202B;
+  --muted:#5B6875;
+  --rule:#D5DCE3;
+  --accent:#0E6C8C;
+  --accent-soft:#E1EEF3;
+  --good:#1D7A4F;
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F161D; --surface:#16202A; --ink:#E6ECF1; --muted:#9AA8B5;
+    --rule:#2A3742; --accent:#5DB8D8; --accent-soft:#17323F; --good:#5CC79A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F161D; --surface:#16202A; --ink:#E6ECF1; --muted:#9AA8B5;
+  --rule:#2A3742; --accent:#5DB8D8; --accent-soft:#17323F; --good:#5CC79A;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@media (max-width:420px){.wrap{padding:0 16px}}
+
+/* Top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.mark{font-family:var(--font-mono);font-size:13px;letter-spacing:.04em;color:var(--muted)}
+.mark b{color:var(--ink);font-weight:500}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:var(--accent)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;padding:56px 0 48px;align-items:start}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:32px;padding-top:40px}}
+.eyebrow{font-family:var(--font-mono);font-size:13px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(44px,7vw,80px);line-height:.98;letter-spacing:-.025em;margin:0 0 20px;text-wrap:balance}
+.lede{font-size:19px;max-width:34em;margin:0 0 24px;color:var(--ink)}
+.lede em{font-style:normal;background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+.contact{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:14px;color:var(--muted)}
+.contact a{font-weight:500}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:7px 12px;border:1px solid var(--rule);border-radius:999px;font-size:13px;background:var(--surface)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--good);display:inline-block}
+
+/* Ledger */
+.ledger{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 18px;font-family:var(--font-mono)}
+.ledger h2{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;display:flex;justify-content:space-between}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:10px 0;border-top:1px dashed var(--rule);font-variant-numeric:tabular-nums}
+.row:first-of-type{border-top:0}
+.row .lbl{font-family:var(--font-body);font-size:14px}
+.row .lbl small{display:block;color:var(--muted);font-size:12px;font-family:var(--font-mono)}
+.row .val{font-size:20px;font-weight:500;color:var(--good);text-align:right;align-self:center}
+.bar{grid-column:1 / -1;height:6px;background:var(--accent-soft);border-radius:3px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--accent);border-radius:3px;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.bar span[data-d="1"]{animation-delay:.12s}.bar span[data-d="2"]{animation-delay:.24s}
+@keyframes grow{from{transform:scaleX(.08)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: reduce){.bar span{animation:none}}
+.ledger .total{display:flex;justify-content:space-between;border-top:2px solid var(--ink);margin-top:6px;padding-top:12px;font-size:13px}
+.ledger .total b{font-weight:500}
+.scale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px}
+
+/* Sections */
+section{padding:56px 0;border-top:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:28px;align-items:baseline}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:6px}}
+.sec-head .num{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+h2.title{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-.015em;margin:0;line-height:1.1;text-wrap:balance}
+h3{font-family:var(--font-display);font-weight:700;font-size:21px;line-height:1.25;margin:0;letter-spacing:-.005em}
+
+/* Experience */
+.jobs{display:grid;gap:0}
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--rule)}
+.job:first-child{border-top:0;padding-top:0}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:6px}}
+.when{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.role{color:var(--muted);font-size:15px;margin:2px 0 10px}
+.job ul{margin:0;padding-left:18px;max-width:62ch}
+.job li{margin:4px 0}
+.job li b{font-weight:600;color:var(--good);font-variant-numeric:tabular-nums}
+
+/* Projects */
+.exhibits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:760px){.exhibits{grid-template-columns:1fr}}
+.ex{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.ex .tag{font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.ex p{margin:0;color:var(--ink)}
+.metric{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.metric b{display:block;font-size:20px;color:var(--ink);font-weight:500}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-size:12px;font-family:var(--font-mono);padding:3px 8px;border-radius:4px;background:var(--accent-soft);color:var(--ink)}
+.links{display:flex;gap:16px;margin-top:auto;padding-top:4px;font-size:14px;font-weight:500}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:860px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+.skills h3{font-size:17px;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted);font-size:15px}
+
+/* Credentials */
+.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media (max-width:760px){.creds{grid-template-columns:1fr}}
+.creds ul{list-style:none;margin:0;padding:0}
+.creds li{padding:12px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:12px}
+.creds li:first-child{border-top:0}
+.creds li span{color:var(--muted);font-size:14px}
+.creds .yr{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Contact */
+.cta{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end}
+@media (max-width:760px){.cta{grid-template-columns:1fr}}
+.cta p{font-size:18px;margin:0;max-width:34em}
+.cards{display:grid;gap:10px}
+.card{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;background:var(--surface);border:1px solid var(--rule);border-radius:8px;font-size:15px;flex-wrap:wrap}
+.card span{color:var(--muted);font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.card a,.card b{font-weight:500;word-break:break-word}
+.copy{font:inherit;font-size:13px;padding:6px 10px;border-radius:6px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:13px;font-family:var(--font-mono);border-top:1px solid var(--rule)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark"><b>SRIKARAN ANAND</b> · Irvine, CA</div>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Financial &amp; Data Analyst · FP&amp;A · BI · Agentic AI</p>
+      <h1>Srikaran Anand</h1>
+      <p class="lede">I turn messy financial and operational data into <em>decisions leaders can act on</em>, and I build the automation and AI agents that get there faster. Three years across Deloitte, FP&amp;A and energy research.</p>
+      <div class="contact">
+        <span>srikaran13@gmail.com</span>
+        <span>(405) 780-3336</span>
+        <a href="https://linkedin.com/in/srikarananand">LinkedIn</a>
+        <a href="https://github.com/srikarananand">GitHub</a>
+      </div>
+      <div class="status"><i aria-hidden="true"></i>Available now · full-time or contract · open to relocation</div>
+    </div>
+
+    <aside class="ledger" aria-label="Results statement">
+      <h2><span>Statement of results</span><span>%</span></h2>
+      <div class="row">
+        <div class="lbl">Manual reporting effort<small>Hamm Institute · dashboards</small></div>
+        <div class="val">−70</div>
+        <div class="bar"><span style="width:70%" data-d="0"></span></div>
+      </div>
+      <div class="row">
+        <div class="lbl">Manual processing effort<small>Oklahoma State · automation</small></div>
+        <div class="val">−40</div>
+        <div class="bar"><span style="width:40%" data-d="1"></span></div>
+      </div>
+      <div class="row">
+        <div class="lbl">Data lag in reporting<small>Deloitte · data pipelines</small></div>
+        <div class="val">−35</div>
+        <div class="bar"><span style="width:35%" data-d="2"></span></div>
+      </div>
+      <div class="scale"><span>0</span><span>50</span><span>100</span></div>
+      <div class="total"><span>Records modeled</span><b>555,000+</b></div>
+    </aside>
+  </div>
+
+  <section id="experience">
+    <div class="sec-head"><span class="num">01 · Experience</span><h2 class="title">Where I've done the work</h2></div>
+    <div class="jobs">
+      <article class="job">
+        <div class="when">Jul 2026 – Oct 2026<br>Denver, CO</div>
+        <div>
+          <h3>Accuserve Solutions</h3>
+          <p class="role">Financial Analyst · roofing &amp; exteriors restoration (CAT)</p>
+          <ul>
+            <li>Built budgets, rolling forecasts and monthly variance analysis, tracing margin swings to storm volume, labor and material costs.</li>
+            <li>Built a pricing forecast model with an agentic AI workflow that pulled data from NetSuite and other sources, guiding pricing and speeding carrier onboarding.</li>
+            <li>Led a Power BI rollout with KPI dashboards tailored to each leader: claims intake, conversion and cycle times.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Jan 2025 – May 2026<br>Stillwater, OK</div>
+        <div>
+          <h3>Oklahoma State University</h3>
+          <p class="role">Graduate Data Analytics Assistant</p>
+          <ul>
+            <li>Cut manual processing effort <b>40%</b> by automating recurring reporting in Python and Power BI.</li>
+            <li>Ran statistical analysis of academic outcomes and presented findings to faculty.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Aug 2025 – Dec 2025<br>Stillwater, OK</div>
+        <div>
+          <h3>Hamm Institute for American Energy</h3>
+          <p class="role">Business Analyst Intern</p>
+          <ul>
+            <li>Cut manual reporting <b>70%</b> with recurring Power BI and Tableau dashboards on validated Snowflake data.</li>
+            <li>Built an LLM-powered RAG assistant that answers state energy-plan questions with cited sources.</li>
+            <li>Mapped gas pipelines, data centers and aqueducts in ArcGIS for infrastructure research.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">Jul 2022 – Jul 2024<br>Bangalore, India</div>
+        <div>
+          <h3>Deloitte</h3>
+          <p class="role">Business Analyst</p>
+          <ul>
+            <li>Cut data lag <b>35%</b> by consolidating Snowflake, Oracle and SQL Server sources into automated pipelines.</li>
+            <li>Owned data integrity for <b>5,000+</b> miles of supply chain asset records.</li>
+            <li>Built SQL-driven Power BI dashboards on vendor, procurement and distribution metrics with FP&amp;A and client teams.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><span class="num">02 · Projects</span><h2 class="title">Exhibits, live and on GitHub</h2></div>
+    <div class="exhibits">
+      <article class="ex">
+        <span class="tag">Agentic AI</span>
+        <h3>EIA Energy Research Assistant</h3>
+        <p>An autonomous ReAct agent that answers U.S. energy questions from the EIA API in plain English, hardened with guardrails and graded by an LLM judge.</p>
+        <div class="metric"><span><b>3</b>MCP tools</span><span><b>6</b>use cases</span><span><b>14</b>guardrails</span></div>
+        <div class="stack"><span>Python</span><span>ReAct</span><span>MCP</span><span>RAG</span><span>SQLite</span><span>Streamlit</span></div>
+        <div class="links"><a href="https://eia-energy-research-assistant.streamlit.app/">Live app</a><a href="https://github.com/srikarananand/EIA-Energy-Research-Assistant">Code</a></div>
+      </article>
+      <article class="ex">
+        <span class="tag">Clustering · Operations</span>
+        <h3>Trip Segment Clustering &amp; Benchmarking</h3>
+        <p>Groups trips by similarity so drivers are benchmarked against comparable routes, with time estimates for new routes. Deployed through SQL stored procedures.</p>
+        <div class="metric"><span><b>122K</b>trip segments</span><span><b>35</b>clusters</span><span><b>0.92</b>FPC</span></div>
+        <div class="stack"><span>Python</span><span>scikit-learn</span><span>Fuzzy C-Means</span><span>SQL</span><span>Plotly</span></div>
+        <div class="links"><a href="https://driverclustering.streamlit.app/">Live app</a><a href="https://github.com/srikarananand/Driver-Clustering-Analysis">Code</a></div>
+      </article>
+      <article class="ex">
+        <span class="tag">RAG · Policy research</span>
+        <h3>Energy Policy Intelligence</h3>
+        <p>Turns dense state energy-plan PDFs into a conversational knowledge base, with a source citation on every answer.</p>
+        <div class="metric"><span><b>&lt;1s</b>retrieval</span><span><b>70B</b>LLaMA 3.3</span><span><b>k=5</b>semantic search</span></div>
+        <div class="stack"><span>LangChain LCEL</span><span>Pinecone</span><span>HuggingFace</span><span>Groq</span></div>
+        <div class="links"><a href="https://state-energy-rag-dnb6mh5nnttea2tvvko4pu.streamlit.app/">Live app</a><a href="https://github.com/srikarananand/RAG-Energy-Plan-Analyzer">Code</a></div>
+      </article>
+      <article class="ex">
+        <span class="tag">Predictive modeling</span>
+        <h3>LLM + Gradient Boosting Ensemble</h3>
+        <p>Fuses zero-shot DistilBERT features with tabular survey data in a stacked model, on the CDC's national health survey.</p>
+        <div class="metric"><span><b>433K</b>records</span><span><b>+7.8</b>pts precision</span><span><b>+4.2</b>pts F1</span></div>
+        <div class="stack"><span>Python</span><span>scikit-learn</span><span>DistilBERT</span><span>Parquet</span></div>
+        <div class="links"><a href="https://github.com/srikarananand/brfss-ensemble-survey-model">Code</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><span class="num">03 · Skills</span><h2 class="title">Tools I reach for</h2></div>
+    <div class="skills">
+      <div><h3>FP&amp;A &amp; finance</h3><p>Budgeting, rolling forecasts, variance analysis, driver-based models, scenario and sensitivity analysis, P&amp;L, NPV / IRR / DCF</p></div>
+      <div><h3>BI &amp; reporting</h3><p>Power BI (DAX, semantic models), Tableau, Looker Studio, SSRS, KPI dashboards, Advanced Excel, Power Query</p></div>
+      <div><h3>Data &amp; engineering</h3><p>SQL, PostgreSQL, Snowflake, Oracle, SQL Server, SSIS, ETL, Alteryx, KNIME, NetSuite ERP</p></div>
+      <div><h3>Data science</h3><p>Python (pandas, scikit-learn), SAS Viya, predictive modeling, clustering, statistical analysis</p></div>
+      <div><h3>AI &amp; agents</h3><p>Agentic AI, MCP, ReAct, RAG, LangChain, vector search, LLM evaluation and guardrails</p></div>
+      <div><h3>Cloud &amp; GIS</h3><p>Azure, Google Cloud, Streamlit, ArcGIS, geospatial analysis</p></div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="sec-head"><span class="num">04 · Credentials</span><h2 class="title">Education &amp; recognition</h2></div>
+    <div class="creds">
+      <ul>
+        <li><div>M.S., Business Analytics &amp; Data Science<br><span>Oklahoma State University</span></div><div class="yr">2024–2026</div></li>
+        <li><div>MBA, Marketing Analytics<br><span>Institute of Public Enterprise, Hyderabad</span></div><div class="yr">2020–2022</div></li>
+        <li><div>Bachelor of Business Administration<br><span>Jain University, Bengaluru</span></div><div class="yr">2017–2020</div></li>
+      </ul>
+      <ul>
+        <li><div>National Champion<br><span>Purdue Data4Good Datathon</span></div><div class="yr">Award</div></li>
+        <li><div>Alteryx Designer Core Certification</div><div class="yr">Cert</div></li>
+        <li><div>Microsoft Certified: Azure AI Fundamentals</div><div class="yr">Cert</div></li>
+        <li><div>Transit Mapping with GIS for Value Capture Financing<br><span>Co-author · accepted at 3 conferences</span></div><div class="yr">Research</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <div>
+        <div class="sec-head" style="grid-template-columns:1fr;margin-bottom:14px"><span class="num">05 · Contact</span><h2 class="title">Let's talk about your data</h2></div>
+        <p>Looking for Financial Analyst, FP&amp;A, BI and Data Analyst roles. On OPT and able to start immediately, full-time or contract, anywhere in the U.S.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div><span>Email</span><br><b>srikaran13@gmail.com</b></div><button class="copy" id="copy-email" type="button" data-copy="srikaran13@gmail.com">Copy</button></div>
+        <div class="card"><div><span>Phone</span><br><b>(405) 780-3336</b></div><button class="copy" id="copy-phone" type="button" data-copy="(405) 780-3336">Copy</button></div>
+        <div class="card"><div><span>LinkedIn</span><br><a href="https://linkedin.com/in/srikarananand">linkedin.com/in/srikarananand</a></div></div>
+        <div class="card"><div><span>GitHub</span><br><a href="https://github.com/srikarananand">github.com/srikarananand</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Srikaran Anand · Irvine, California</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    var done = function(ok){ btn.textContent = ok ? 'Copied' : 'Select to copy'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); };
+    try { navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); }); }
+    catch(e){ done(false); }
+  });
+});
+</script>
+</body>
+</html>
