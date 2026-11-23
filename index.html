@@ -979,25 +979,23 @@ h2.title{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-.022em;l
         </article>
 
         <article class="ex" data-domains="tr sc ins">
-          <div class="ex-h"><svg class="emb" aria-hidden="true"><use href="#e-clu"/></svg><div><span class="tag">Clustering · Operations</span><h3>Trip Segment Clustering &amp; Benchmarking</h3></div></div>
-          <ol class="flow"><li><span class="k"><svg aria-hidden="true"><use href="#s-prob"/></svg>Problem</span><p>Comparing drivers is only fair when their routes are alike.</p></li><li><span class="k"><svg aria-hidden="true"><use href="#s-build"/></svg>Built</span><p>Fuzzy clustering of <b>122K</b> trip segments into <b>35</b> benchmark groups, run in SQL.</p></li><li class="win"><span class="k"><svg aria-hidden="true"><use href="#s-win"/></svg>Enabled</span><p>Like-for-like benchmarks, and time estimates for new routes.</p></li></ol>
+          <div class="ex-h"><svg class="emb" aria-hidden="true"><use href="#e-clu"/></svg><div><span class="tag">Operations analytics · Clustering</span><h3>Fair Time Benchmarks for Unmatched Routes</h3></div></div>
+          <ol class="flow"><li><span class="k"><svg aria-hidden="true"><use href="#s-prob"/></svg>Problem</span><p><b>42%</b> of a tank-truck carrier's driving segments had no past match, so there was no fair benchmark for them.</p></li><li><span class="k"><svg aria-hidden="true"><use href="#s-build"/></svg>Built</span><p>Led the fuzzy clustering of <b>122K</b> one-off segments into <b>35</b> peer groups, deployed in SQL.</p></li><li class="win"><span class="k"><svg aria-hidden="true"><use href="#s-win"/></svg>Enabled</span><p>Benchmark error cut <b>75%</b>. Trip benchmark within <b>1.1%</b> of Google Maps.</p></li></ol>
           <div class="result">
             <span class="rlbl">Result</span>
-            <svg viewBox="0 0 300 78" role="img" aria-label="122 thousand trip segments grouped into 35 clusters, fuzzy partition coefficient 0.92 out of 1">
-              <text x="0" y="22" font-size="20" font-weight="500">122K</text><text x="0" y="35" font-size="9" class="mut">trip segments</text>
-              <g class="acc" opacity=".35"><circle cx="78" cy="10" r="2"/><circle cx="86" cy="18" r="2"/><circle cx="80" cy="26" r="2"/><circle cx="92" cy="8" r="2"/><circle cx="96" cy="24" r="2"/><circle cx="88" cy="32" r="2"/><circle cx="102" cy="14" r="2"/><circle cx="74" cy="20" r="2"/></g>
-              <path class="lnk" d="M112 20h46M152 16l6 4-6 4"/>
-              <g class="acc"><circle cx="176" cy="14" r="6"/><circle cx="192" cy="24" r="6" opacity=".6"/><circle cx="176" cy="30" r="4" opacity=".4"/></g>
-              <text x="210" y="22" font-size="20" font-weight="500" class="acc">35</text><text x="210" y="35" font-size="9" class="mut">benchmark groups</text>
-              <rect x="0" y="52" width="300" height="8" rx="4" fill="var(--rule)"/>
-              <rect x="0" y="52" width="276" height="8" rx="4" class="good"/>
-              <text x="0" y="74" font-size="9" class="mut">0</text><text x="300" y="74" font-size="9" class="mut" text-anchor="end">1.0</text>
-              <text x="150" y="74" font-size="9" text-anchor="middle">FPC 0.92 · clear, well-separated groups</text>
+            <svg viewBox="0 0 300 80" role="img" aria-label="42 percent of segments newly benchmarked; benchmark error down 75 percent, from 108 to 28 minutes; trip benchmark within 1.1 percent of Google Maps; 95 percent of drivers within 10 percent of their peer benchmark">
+              <text x="0" y="20" font-size="19" font-weight="500" class="acc">42%</text><text x="0" y="32" font-size="8.5" class="mut">segments newly</text><text x="0" y="42" font-size="8.5" class="mut">benchmarked</text>
+              <text x="78" y="20" font-size="19" font-weight="500" class="acc">−75%</text><text x="78" y="32" font-size="8.5" class="mut">benchmark</text><text x="78" y="42" font-size="8.5" class="mut">error</text>
+              <text x="156" y="20" font-size="19" font-weight="500" class="acc">1.1%</text><text x="156" y="32" font-size="8.5" class="mut">gap to</text><text x="156" y="42" font-size="8.5" class="mut">Google Maps</text>
+              <text x="234" y="20" font-size="19" font-weight="500" class="acc">95%</text><text x="234" y="32" font-size="8.5" class="mut">drivers within</text><text x="234" y="42" font-size="8.5" class="mut">±10% of peers</text>
+              <rect x="0" y="54" width="300" height="7" rx="3.5" fill="var(--rule)"/>
+              <rect x="0" y="54" width="78" height="7" rx="3.5" class="good"/>
+              <text x="0" y="76" font-size="9">Avg. miss: <tspan class="acc" font-weight="500">28 min</tspan> with peer groups</text><text x="300" y="76" font-size="9" class="mut" text-anchor="end">108 min fleet-wide average</text>
             </svg>
           </div>
           <div class="inds"><span class="rlbl">Commonly used in</span><span>Freight, 3PL &amp; last-mile</span><span>Field service &amp; restoration crews</span><span>Distribution &amp; fleet ops</span><span>Workforce &amp; comp planning</span></div>
-          <div class="stack"><span><svg aria-hidden="true"><use href="#t-python"/></svg>Python</span><span><svg aria-hidden="true"><use href="#t-scikitlearn"/></svg>scikit-learn</span><span>Fuzzy C-Means</span><span>SQL</span><span><svg aria-hidden="true"><use href="#t-plotly"/></svg>Plotly</span></div>
-          <div class="links"><a href="https://driverclustering.streamlit.app/">Live app</a><a href="https://github.com/srikarananand/Driver-Clustering-Analysis">Code</a></div>
+          <div class="stack"><span><svg aria-hidden="true"><use href="#t-python"/></svg>Python</span><span><svg aria-hidden="true"><use href="#t-scikitlearn"/></svg>scikit-learn</span><span>Fuzzy C-Means</span><span>SQL</span><span><svg aria-hidden="true"><use href="#t-plotly"/></svg>Plotly</span><span><svg aria-hidden="true"><use href="#t-streamlit"/></svg>Streamlit</span></div>
+          <div class="links"><a href="https://driverclustering.streamlit.app/">Live KPI report</a><a href="https://github.com/srikarananand/Fair-Time-Benchmarks">Code</a></div>
         </article>
 
         <article class="ex" data-domains="en ins hc edu">
@@ -1451,7 +1449,7 @@ h2.title{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-.022em;l
         </article>
         <article class="dom" data-dom="tr">
           <svg class="dom-illo" aria-hidden="true"><use href="#g-tr"/></svg>
-          <span class="src">Trip clustering project · 122K segments</span>
+          <span class="src">Fair time benchmarks · 122K segments</span>
           <h3>Transportation &amp; logistics</h3>
           <p>Benchmarking driver and route performance against comparable trips, and estimating times for routes with no history.</p>
           <div class="to"><span class="to-lbl">Translates to</span>
@@ -1589,7 +1587,7 @@ document.querySelectorAll('.copy').forEach(function(btn){
     ins:{name:'Insurance & catastrophe restoration', why:'Demand here swings with every storm. I have forecast it, budgeted for it and explained the variance when it hit margins.', where:'Accuserve (Financial Business Analyst): rolling forecasts, variance tied to storm volume, labor and materials, agentic pricing model, a guardrailed agent for carrier contract terms, Power BI for claims intake and cycle time.'},
     sc:{name:'Supply chain, procurement & vendor ops', why:'Two years at Deloitte on vendor, procurement and distribution data, where one bad record ripples into every report.', where:'Deloitte (Business Analyst): a database revamp that moved an ERP and 8 other sources into one server, with 35% less data lag; integrity for 5,000+ miles of asset records.'},
     en:{name:'Energy & infrastructure', why:'I have worked with EIA data, state energy plans and infrastructure maps, and built AI tools that make them answerable.', where:'Hamm Institute (Research Analyst Intern): part of the first study of starting nuclear plants in Oklahoma, then selected for S&P Global’s CERAWeek 2026 NextGen cohort; a cited RAG assistant, EIA benchmarking of state energy goals, ArcGIS mapping of pipelines and data centers.'},
-    tr:{name:'Transportation & logistics', why:'Fair performance measurement needs like-for-like comparisons; I built the clustering that makes that possible.', where:'Trip segment clustering: 122K segments into 35 benchmark groups (0.92 FPC), with time estimates for new routes, deployed in SQL.'},
+    tr:{name:'Transportation & logistics', why:'Fair performance measurement needs like-for-like comparisons; I built the clustering that makes that possible.', where:'Fair Time Benchmarks: led the clustering of 122K unmatched trip segments into 35 peer groups, deployed in SQL. Benchmark error down 75%, and the trip benchmark came within 1.1% of Google Maps.'},
     hc:{name:'Healthcare & public health', why:'Large, messy health data and risk models where precision decides who gets outreach, plus a national win using AI to help a nonprofit support grieving military families.', where:'CDC national health survey: 1.2 GB, 433K records, stacked LLM + gradient boosting model, +7.8 pts precision. National Champion, Purdue Data4Good Datathon: TAPS grief-journey mapping, weighted F1 0.94. University of Iowa case competition for Wellmark: SARIMAX Medicaid enrollment forecast.'},
     edu:{name:'Education & public sector', why:'Recurring reporting and statistical findings for faculty and research audiences, plus published GIS research.', where:'Oklahoma State (Graduate Teaching Assistant): 40% less manual processing; land value capture research accepted at 3 U.S. data conferences.'}
   };
