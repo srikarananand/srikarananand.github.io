@@ -94,23 +94,14 @@ h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:600;letter-spacin
 .lede{color:var(--muted);max-width:60ch;margin-bottom:30px;font-size:17px}
 .portrait img{width:100%;height:auto;border-radius:16px;background:#0b0b0c;border:1px solid var(--line)}
 .portrait p{margin-top:12px;font-size:14px;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
-.stat{padding:22px 24px;border-left:1px solid var(--line)}
-.stat:first-child{border-left:0}
-.stat b{display:block;font-size:32px;font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
-.stat em{display:block;font-style:normal;font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px}
-.stat span{font-size:14px;color:var(--muted);display:block}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
 .facts dt{font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 .facts dd{font-size:14px;color:var(--muted)}
 .facts dd b{color:var(--text);font-weight:500}
 @media (max-width:860px){
   .hero-grid{grid-template-columns:1fr;gap:32px}
   .portrait{order:-1;max-width:160px}
-  .stats{grid-template-columns:1fr}
-  .stat{border-left:0;border-top:1px solid var(--line)}
-  .stat:first-child{border-top:0}
-  .facts{grid-template-columns:1fr 1fr}
+        .facts{grid-template-columns:1fr 1fr}
 }
 
 /* Logo strip */
@@ -284,12 +275,6 @@ footer a{color:var(--muted)}
         <img src="assets/img/headshot-cutout.webp" srcset="assets/img/headshot-cutout-480.webp 480w, assets/img/headshot-cutout.webp 900w" sizes="260px" width="900" height="1230" alt="Portrait of Srikaran Anand in a suit and tie" fetchpriority="high">
         <figcaption><span>Irvine, California</span></figcaption>
       </figure>
-    </div>
-
-    <div class="stats" aria-label="Results">
-      <div class="stat"><b>35%</b><em>Shorter data lag</em><span>At Deloitte, I helped bring a client's ERP and 8 other sources into one server.</span></div>
-      <div class="stat"><b>72%</b><em>Less time pulling FP&amp;A data</em><span>At Accuserve, I built AI agents that pull and reconcile NetSuite data.</span></div>
-      <div class="stat"><b>1st</b><em>National champion, Purdue Data4Good</em><span>Our team of four mapped survivor journeys for a nonprofit that supports grieving military families.</span></div>
     </div>
 
     <dl class="facts">
