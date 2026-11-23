@@ -955,7 +955,7 @@ h2.title{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-.022em;l
   <section id="projects">
     <div class="wrap">
       <div class="sec-head"><span class="num"><i>02</i>Projects</span><h2 class="title">Exhibits, live and on GitHub</h2></div>
-      <p class="roles-lede">Three live reports and apps you can open right now, one predictive model on GitHub, and a case competition for Wellmark. Each one starts from a question someone needed answered.</p>
+      <p class="roles-lede">Five live reports and apps you can open right now, one predictive model on GitHub, and a case competition for Wellmark. Each one starts from a question someone needed answered.</p>
       <div class="exhibits reveal">
         <article class="ex" data-domains="en sc ins edu">
           <div class="ex-h"><svg class="emb" aria-hidden="true"><use href="#e-eia"/></svg><div><span class="tag">FP&amp;A · Cost-risk study</span><h3>Where Will the Electricity Budget Break?</h3></div></div>
@@ -975,6 +975,30 @@ h2.title{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-.022em;l
           <div class="inds"><span class="rlbl">Commonly used in</span><span>Retail &amp; restaurant chains</span><span>FP&amp;A &amp; finance teams</span><span>Facilities &amp; real estate</span><span>Consulting &amp; policy research</span></div>
           <div class="stack"><span><svg aria-hidden="true"><use href="#t-python"/></svg>Python</span><span>pandas</span><span>Backtesting</span><span>EIA API</span><span>Static report</span></div>
           <div class="links"><a href="https://srikarananand.github.io/Electricity-Cost-Risk-Study/">Report</a><a href="https://github.com/srikarananand/Electricity-Cost-Risk-Study">Code</a></div>
+        </article>
+
+        <article class="ex" data-domains="en sc ins edu">
+          <div class="ex-h"><svg class="emb" aria-hidden="true"><use href="#e-eia"/></svg><div><span class="tag">KPI governance · AI guardrails</span><h3>Can a Business Question Get a Governed Answer?</h3></div></div>
+          <ol class="flow"><li><span class="k"><svg aria-hidden="true"><use href="#s-prob"/></svg>Problem</span><p>Natural-language data tools return confident numbers that nobody can trace to a defined KPI.</p></li><li><span class="k"><svg aria-hidden="true"><use href="#s-build"/></svg>Built</span><p>A question layer over EIA electricity data that routes to <b>10</b> certified metrics with fixed SQL. The language model never writes SQL or produces a number.</p></li><li class="win"><span class="k"><svg aria-hidden="true"><use href="#s-win"/></svg>Enabled</span><p>Answered <b>90%</b> of unseen questions correctly and declined <b>96%</b> of the ones it should not answer.</p></li></ol>
+          <div class="result">
+            <span class="rlbl">Result</span>
+            <svg viewBox="0 0 300 80" role="img" aria-label="On 115 unseen questions: 90.1 percent of answerable questions correct, 96.3 percent of unanswerable questions correctly declined, 3.5 percent wrong answers"><text x="0" y="20" font-size="19" font-weight="500" class="acc">90.1%</text><text x="0" y="32" font-size="8.5" class="mut">answered correctly</text><text x="0" y="42" font-size="8.5" class="mut">(73 of 81 unseen)</text><text x="100" y="20" font-size="19" font-weight="500" class="acc">96.3%</text><text x="100" y="32" font-size="8.5" class="mut">correct declines</text><text x="100" y="42" font-size="8.5" class="mut">(26 of 27)</text><text x="200" y="20" font-size="19" font-weight="500" class="acc">3.5%</text><text x="200" y="32" font-size="8.5" class="mut">wrong answers</text><text x="200" y="42" font-size="8.5" class="mut">(4 of 115)</text></svg>
+          </div>
+          <p class="whyai"><b>Why AI here:</b> the model only maps a question to a certified metric. The number always comes from governed SQL, and results are tested against an independent calculation on questions held out from tuning.</p>
+          <div class="stack"><span>Python</span><span>DuckDB</span><span>Semantic layer</span><span>Eval harness</span><span>MCP</span></div>
+          <div class="links"><a href="https://srikarananand.github.io/Ask-the-KPI/">Report</a><a href="https://github.com/srikarananand/Ask-the-KPI">Code</a></div>
+        </article>
+
+        <article class="ex" data-domains="en sc ins edu">
+          <div class="ex-h"><svg class="emb" aria-hidden="true"><use href="#e-eia"/></svg><div><span class="tag">Policy analytics · Evidence guard</span><h3>Who Protects Ratepayers from Data-Center Load?</h3></div></div>
+          <ol class="flow"><li><span class="k"><svg aria-hidden="true"><use href="#s-prob"/></svg>Problem</span><p>State plans and utility plans say very different things about who pays for data-center growth, and they are too long to compare by hand.</p></li><li><span class="k"><svg aria-hidden="true"><use href="#s-build"/></svg>Built</span><p>A matrix of <b>11</b> public plans across <b>8</b> attributes. An automated guard accepts a claim only if its quote is word for word on the cited page.</p></li><li class="win"><span class="k"><svg aria-hidden="true"><use href="#s-win"/></svg>Enabled</span><p>Showed that only <b>2</b> of 7 jurisdictions state a dedicated large-load rate class, with every claim linked to its page.</p></li></ol>
+          <div class="result">
+            <span class="rlbl">Result</span>
+            <svg viewBox="0 0 300 80" role="img" aria-label="36 claims coded across 11 public documents, all 36 quotes verified on the cited page; 2 of 7 jurisdictions state a dedicated large-load rate class; label accuracy not yet measured"><text x="0" y="20" font-size="19" font-weight="500" class="acc">11</text><text x="0" y="32" font-size="8.5" class="mut">public plans</text><text x="0" y="42" font-size="8.5" class="mut">8 attributes</text><text x="100" y="20" font-size="19" font-weight="500" class="acc">36 of 36</text><text x="100" y="32" font-size="8.5" class="mut">quotes verified</text><text x="100" y="42" font-size="8.5" class="mut">on the cited page</text><text x="200" y="20" font-size="19" font-weight="500" class="acc">2 of 7</text><text x="200" y="32" font-size="8.5" class="mut">have a large-load</text><text x="200" y="42" font-size="8.5" class="mut">rate class</text></svg>
+          </div>
+          <p class="whyai"><b>Why AI here:</b> a model-style reader scales the comparison, and the guard keeps invented quotes out. It cannot judge whether a label is right, so label accuracy is flagged as unmeasured.</p>
+          <div class="stack"><span>Python</span><span>Retrieval (BM25)</span><span>LLM extraction</span><span>Evidence guard</span><span>Fault injection</span></div>
+          <div class="links"><a href="https://srikarananand.github.io/Large-Load-Policy-Matrix/">Report</a><a href="https://github.com/srikarananand/Large-Load-Policy-Matrix">Code</a></div>
         </article>
 
         <article class="ex" data-domains="tr sc ins">
