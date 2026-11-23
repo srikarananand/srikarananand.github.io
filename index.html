@@ -170,8 +170,9 @@ h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:600;letter-spacin
 @media (max-width:640px){.findings{grid-template-columns:1fr}}
 
 /* How I work */
-.cols{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 48px}
-@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 32px}
+@media (max-width:860px){.cols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cols{grid-template-columns:1fr}}
 .cols h3{font-size:17px;margin-bottom:6px}
 .cols p{color:var(--muted);font-size:15px}
 .plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
@@ -180,6 +181,7 @@ h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:600;letter-spacin
 .plan h4{font-size:12.5px;color:var(--accent);font-weight:500;margin-bottom:4px}
 .plan h3{font-size:17px;margin-bottom:12px}
 .plan li{color:var(--muted);font-size:14.5px;margin:0 0 8px 18px}
+.plan p{color:var(--muted);font-size:14.5px}
 
 /* Roles */
 .role-list{display:grid;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
@@ -241,11 +243,11 @@ footer a{color:var(--muted)}
   <div class="wrap nav-in">
     <a class="brand" href="#top">Srikaran Anand</a>
     <nav class="menu" aria-label="Sections">
+      <a href="#how">How I work</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#data4good">Data4Good</a>
       <a href="#research">Research</a>
-      <a href="#how">How I work</a>
       <a href="#roles">Roles</a>
       <a href="#skills">Skills</a>
     </nav>
@@ -292,6 +294,25 @@ footer a{color:var(--muted)}
       <img src="assets/logos/okstate-dark.png" alt="Oklahoma State University" height="24" loading="lazy">
       <img src="assets/logos/data4good-dark.png" alt="Data4Good" height="24" loading="lazy">
       <img src="assets/logos/spglobal-dark.png" alt="S&amp;P Global" height="24" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">Working together</p>
+    <h2>What working with me looks like</h2>
+    <p class="intro">From raw data to a decision, built with the people who make it.</p>
+    <div class="cols">
+      <div><h3>Question first</h3><p>I turn a team's question into clear KPI definitions before I build anything.</p></div>
+      <div><h3>Built for the user</h3><p>Each dashboard is shaped around the person who uses it.</p></div>
+      <div><h3>AI where it helps</h3><p>A rule where a rule works. Any AI I ship is tested and shows its sources.</p></div>
+      <div><h3>Full stack</h3><p>Pipelines, models and dashboards. I build all three.</p></div>
+    </div>
+    <div class="plan">
+      <div class="card"><h4>Days 1–30</h4><h3>Listen and learn</h3><p>Meet the team, learn how decisions get made, and read before changing anything.</p></div>
+      <div class="card"><h4>Days 31–60</h4><h3>Map and earn trust</h3><p>Agree on the KPIs that matter and deliver one or two quick wins.</p></div>
+      <div class="card"><h4>Days 61–90</h4><h3>Propose and build</h3><p>Share a plan with my manager, then build the highest-value piece.</p></div>
     </div>
   </div>
 </section>
@@ -524,24 +545,6 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
-<section id="how">
-  <div class="wrap">
-    <p class="eyebrow">Working together</p>
-    <h2>What working with me looks like</h2>
-    <p class="intro">I own the path from raw data to decision, and I sit between the people asking questions and the data that answers them.</p>
-    <div class="cols">
-      <div><h3>I translate between business and data</h3><p>I have worked inside insurance claims, energy policy research, and supply chain and risk consulting. I turn a team's question into KPI definitions and data requirements before I build anything.</p></div>
-      <div><h3>I use AI where it helps</h3><p>I use language models for the slow parts: pulling and reconciling ERP data, finding contract terms, searching policy documents. Where a rule will do, I use a rule. My cost-risk study is plain backtesting with no model at all. When I do use AI, I test it and show sources.</p></div>
-      <div><h3>I work with stakeholders</h3><p>At Accuserve, leaders tracked claims in manual spreadsheets. I led the Power BI rollout and built a dashboard for each leader, so they had live numbers.</p></div>
-      <div><h3>I cover the full data stack</h3><p>I build the pipelines (Python and SQL at Deloitte, document ingestion for the energy assistant), the models (clustering, forecasting, gradient boosting, random forests) and the dashboards on top. Data engineering and data science are part of how I work, not extras.</p></div>
-    </div>
-    <div class="plan">
-      <div class="card"><h4>Days 1–30</h4><h3>Listen and learn</h3><ul><li>Meet each teammate and stakeholder one on one.</li><li>Learn how decisions get made and who relies on which reports.</li><li>Read the existing dashboards, data and docs before changing anything.</li></ul></div>
-      <div class="card"><h4>Days 31–60</h4><h3>Map and earn trust</h3><ul><li>Map stakeholders, workflows and data sources end to end.</li><li>Agree on the KPIs that matter and where each number comes from.</li><li>Find the friction, then deliver one or two small wins the team asked for.</li></ul></div>
-      <div class="card"><h4>Days 61–90</h4><h3>Propose and build</h3><ul><li>Share what I learned and a short plan, agreed with my manager.</li><li>Start the highest-value BI or AI piece with the people who will use it.</li><li>Set a steady rhythm for feedback.</li></ul></div>
-    </div>
-  </div>
-</section>
 
 <section id="roles">
   <div class="wrap">
