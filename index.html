@@ -185,7 +185,7 @@ h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:600;letter-spacin
 
 /* Roles */
 .role-list{display:grid;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
-.role-row{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:26px 28px;border-top:1px solid var(--line)}
+.role-row{display:grid;grid-template-columns:280px 1fr;gap:32px;padding:16px 28px;border-top:1px solid var(--line);align-items:baseline}
 .role-row:first-child{border-top:0}
 .role-row h3{font-size:17px}
 .role-row p{color:var(--muted);font-size:15px}
@@ -265,7 +265,7 @@ footer a{color:var(--muted)}
         <h1>Srikaran Anand</h1>
         <p class="role">Data &amp; Analytics Professional</p>
         <p class="muted" style="margin:-8px 0 18px">Business intelligence · Data engineering · Data science · AI analytics</p>
-        <p class="lede">I turn scattered business data into dashboards, forecasts and AI tools that leaders use to make decisions. I also build the pipelines underneath and the models on top. I have worked in consulting, insurance and energy.</p>
+        <p class="lede">I turn scattered business data into dashboards, forecasts and AI tools that leaders use to decide. I have done it in consulting, insurance and energy.</p>
         <div class="ctas">
           <a class="btn primary" href="mailto:srikaran13@gmail.com">Email me</a>
           <a class="btn" href="#projects">See projects</a>
@@ -280,7 +280,7 @@ footer a{color:var(--muted)}
     </div>
 
     <dl class="facts">
-      <div><dt>Looking for</dt><dd><b>BI analyst, data strategy and analytics consulting, AI-enabled analytics, data engineer, data scientist, business or data analyst</b></dd></div>
+      <div><dt>Looking for</dt><dd><b>BI, analytics consulting, AI analytics, data engineering, data science</b></dd></div>
       <div><dt>Work status</dt><dd><b>U.S. work authorized</b> on OPT (active through July 2027) plus STEM OPT extension</dd></div>
       <div><dt>Location</dt><dd><b>Open to relocate</b> anywhere in the U.S., or remote</dd></div>
       <div><dt>Type</dt><dd><b>Full-time or contract</b></dd></div>
@@ -321,17 +321,16 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">Experience</p>
     <h2>Where I have done the work</h2>
-    <p class="intro">Each role below lists the problem, what I built and what changed.</p>
 
     <article class="job">
       <div class="when"><b>Jul 2026 – Oct 2026</b>Denver, CO</div>
       <div>
         <h3>Accuserve Solutions</h3>
-        <p class="sub">Financial Business Analyst. BI, FP&amp;A and automation for an insurance claims and restoration company.</p>
+        <p class="sub">Financial Business Analyst · insurance claims and restoration</p>
         <div class="items">
-          <div class="item"><h4>Carrier contract assistant</h4><p><b>Problem:</b> each carrier's contract terms sat in internal documents, worded differently every time. <b>Built:</b> an AI assistant with checks built in that finds the terms on request. <b>Result:</b> adjusters and contractors work from the same terms without searching.</p></div>
-          <div class="item"><h4>Power BI rollout</h4><p><b>Problem:</b> leaders tracked claims intake, conversion and cycle times in spreadsheet reports. <b>Built:</b> led the move to Power BI with a KPI dashboard for each leader. <b>Result:</b> live numbers instead of waiting for reports.</p></div>
-          <div class="item"><h4>Finance work, with automation</h4><p><b>Problem:</b> the FP&amp;A team pulled NetSuite data by hand. <b>Built:</b> AI agents that pull and reconcile the data, while I kept the company's monthly finance packs on schedule. <b>Result:</b> <b>72% less</b> time spent gathering data.</p></div>
+          <div class="item"><h4>Power BI rollout</h4><p>Moved leaders from spreadsheet reports to a live Power BI dashboard each.</p></div>
+          <div class="item"><h4>FP&amp;A automation</h4><p>Built AI agents that pull and reconcile NetSuite data: <b>72% less</b> time gathering data.</p></div>
+          <div class="item"><h4>Carrier contract assistant</h4><p>Built an AI assistant that finds each carrier's contract terms on request.</p></div>
         </div>
       </div>
     </article>
@@ -340,10 +339,10 @@ footer a{color:var(--muted)}
       <div class="when"><b>Jan 2025 – May 2026</b>Stillwater, OK</div>
       <div>
         <h3>Oklahoma State University</h3>
-        <p class="sub">Graduate Teaching Assistant, Business Analytics and Data Science.</p>
+        <p class="sub">Graduate Teaching Assistant, Business Analytics and Data Science</p>
         <div class="items">
-          <div class="item"><h4>Reporting automation</h4><p><b>Problem:</b> program performance reporting was a manual chore that repeated every cycle. <b>Built:</b> Python and pandas scripts for cleaning, transforming and scheduled runs. <b>Result:</b> <b>40% less</b> reporting effort.</p></div>
-          <div class="item"><h4>Teaching and faculty insight</h4><p>Taught SQL, Python and analytics to graduate students. Presented analysis of academic outcomes to faculty for curriculum and resource planning.</p></div>
+          <div class="item"><h4>Reporting automation</h4><p>Automated recurring program reporting with Python: <b>40% less</b> effort.</p></div>
+          <div class="item"><h4>Teaching</h4><p>Taught SQL, Python and analytics; presented outcome analysis to faculty.</p></div>
         </div>
       </div>
     </article>
@@ -352,10 +351,10 @@ footer a{color:var(--muted)}
       <div class="when"><b>Aug 2025 – Dec 2025</b>Oklahoma City, OK</div>
       <div>
         <h3>Hamm Institute for American Energy</h3>
-        <p class="sub">Research Analyst Intern. Part of the team on the first study of starting nuclear power plants in Oklahoma.</p>
+        <p class="sub">Research Analyst Intern · team on Oklahoma's first nuclear power study</p>
         <div class="items">
-          <div class="item"><h4>New research tools</h4><p><b>Problem:</b> researchers searched regulatory filings and policy papers by hand. <b>Built:</b> an assistant that answers questions about state energy plans and cites its sources. <b>Result:</b> answers a researcher can check, instead of manual searching.</p></div>
-          <div class="item"><h4>Energy goals check</h4><p><b>Problem:</b> were proposed state energy goals realistic? <b>Built:</b> a comparison against actual production and consumption in EIA data. <b>Result:</b> showed researchers where the targets fell short.</p></div>
+          <div class="item"><h4>Research assistant</h4><p>Built an assistant that answers questions on state energy plans, with sources.</p></div>
+          <div class="item"><h4>Energy goals check</h4><p>Tested state energy goals against EIA production and consumption data.</p></div>
         </div>
       </div>
     </article>
@@ -364,16 +363,16 @@ footer a{color:var(--muted)}
       <div class="when"><b>Jul 2022 – Jul 2024</b>Bengaluru, India</div>
       <div>
         <h3>Deloitte</h3>
-        <p class="sub">Business Analyst. Data and analytics consulting for supply chain, procurement and energy infrastructure clients.</p>
+        <p class="sub">Business Analyst · supply chain, procurement and energy infrastructure clients</p>
         <div class="items">
-          <div class="item"><h4>Database move</h4><p><b>Problem:</b> client data was spread across an ERP and 8 other sources. <b>Built:</b> worked on the move into one server, with Python pipelines. <b>Result:</b> <b>35% less</b> data lag and near-real-time reporting.</p></div>
-          <div class="item"><h4>Executive dashboards</h4><p><b>Problem:</b> senior stakeholders needed one view of vendor performance, procurement and distribution. <b>Built:</b> SQL-driven Power BI dashboards, on asset records I kept audit-ready across 5,000+ miles of infrastructure. <b>Result:</b> client executives used them to decide.</p></div>
-          <div class="item"><h4>Risk work</h4><p>Worked with cybersecurity teams on cyber and strategic risk. That is where I learned to start from the client's question and bring in the right specialists.</p></div>
+          <div class="item"><h4>Database move</h4><p>Helped move an ERP and 8 other sources into one server: <b>35% less</b> data lag.</p></div>
+          <div class="item"><h4>Executive dashboards</h4><p>Built SQL-driven Power BI dashboards on vendor and procurement performance.</p></div>
+          <div class="item"><h4>Data quality</h4><p>Kept asset records audit-ready across 5,000+ miles of infrastructure.</p></div>
         </div>
       </div>
     </article>
 
-    <p class="earlier"><b>Before Deloitte.</b> Fiverr, analytics consultant (freelance, 2019–20): 50+ analytics projects for clients worldwide, 5-star rating. Outlook Publishing, R&amp;D intern (2021): market research that fed content planning and raised audience engagement by 15%. Sportskeeda, content analyst intern (2017–18).</p>
+    <p class="earlier"><b>Before Deloitte:</b> freelance analytics consultant on Fiverr (50+ projects, 2019–20), and internships at Outlook Publishing (2021) and Sportskeeda (2017–18).</p>
   </div>
 </section>
 
@@ -381,7 +380,7 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">Projects</p>
     <h2>Work you can open</h2>
-    <p class="intro">Five live reports and apps, and a case competition. Each starts from a question someone needed answered. Every card says where the project started and what it does not show. The apps run on free hosting and sleep when idle, so the first load can take up to a minute.</p>
+    <p class="intro">Each project starts from a business question and states its limits. Apps may take a minute to wake up.</p>
 
     <div class="cards two">
 
@@ -389,11 +388,10 @@ footer a{color:var(--muted)}
         <p class="tag">FP&amp;A · Cost-risk study</p>
         <h3>Where will the electricity budget break?</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>Multi-site operators budget electricity at last year's rate and do not know which states will break the budget.</dd></div>
-          <div><dt>What I did</dt><dd>Tested 4 budgeting rules across 51 states and 16 years, and built a 2027 base case from EIA's regional outlook.</dd></div>
-          <div><dt>Result</dt><dd>Last year's rate misses by more than 5% in 42% of state-years. Adding a flat 3% cuts that to 13%. I recommend at least 6.9% contingency, and 14–30% in HI, RI, DC, NV and CA.</dd></div>
+          <div><dt>Result</dt><dd>Budgeting at last year's rate misses by over 5% in 42% of state-years. A flat 3% cuts that to 13%.</dd></div>
+          <div><dt>How</dt><dd class="muted">Backtested 4 budgeting rules across 51 states and 16 years of EIA prices.</dd></div>
         </dl>
-        <p class="origin"><b>Where it started:</b> the EIA research assistant. The idea came from my Hamm Institute internship, and I built the assistant for an Oklahoma State course on agentic AI (April 2026). I then rebuilt it as a tested study because a budget decision needs a fixed answer a finance team can audit.</p>
+        <p class="origin">Idea from my Hamm internship; built for an Oklahoma State agentic AI course.</p>
         <ul class="chips"><li>Python</li><li>pandas</li><li>Backtesting</li><li>EIA API</li></ul>
         <div class="ctas">
           <a class="btn primary small" href="https://srikarananand.github.io/Electricity-Cost-Risk-Study/" target="_blank" rel="noopener">Read the report</a>
@@ -405,11 +403,10 @@ footer a{color:var(--muted)}
         <p class="tag">KPI governance · Data engineering</p>
         <h3>Can a business question get a governed answer?</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>Chat-style data tools return confident numbers that nobody can trace to an agreed KPI definition.</dd></div>
-          <div><dt>What I did</dt><dd>Built a question layer over EIA electricity data. Each question maps to one of 10 approved metrics with fixed SQL. The model never writes SQL or a number.</dd></div>
-          <div><dt>Result</dt><dd>On 115 questions written after the design was frozen, 90% of answerable questions were correct (73 of 81) and 96% of out-of-scope questions were declined.</dd></div>
+          <div><dt>Result</dt><dd>On 115 new questions: 90% answered correctly, 96% of out-of-scope questions declined.</dd></div>
+          <div><dt>How</dt><dd class="muted">Each question maps to one of 10 approved metrics with fixed SQL. The model never writes a number.</dd></div>
         </dl>
-        <p class="origin"><b>Where it started:</b> the EIA research assistant. The idea came from my Hamm Institute internship, and I built it for an Oklahoma State course on agentic AI (April 2026). <b>Limit:</b> the tested router is rule-based. The language-model router is built but not yet measured.</p>
+        <p class="origin"><b>Limit:</b> only the rule-based router is measured so far.</p>
         <ul class="chips"><li>Python</li><li>SQLite</li><li>Semantic layer</li><li>MCP</li></ul>
         <div class="ctas">
           <a class="btn primary small" href="https://srikarananand.github.io/Ask-the-KPI/" target="_blank" rel="noopener">Read the report</a>
@@ -421,11 +418,10 @@ footer a{color:var(--muted)}
         <p class="tag">Policy analytics · Evidence check</p>
         <h3>Who protects ratepayers from data-center load?</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>State and utility plans say very different things about who pays for data-center growth, and they are too long to compare by hand.</dd></div>
-          <div><dt>What I did</dt><dd>Built a matrix of 11 public plans across 8 attributes. An automated check accepts a claim only if its quote appears word for word on the cited page.</dd></div>
-          <div><dt>Result</dt><dd>All 36 quotes were confirmed. Only 2 of the 8 jurisdictions (Virginia, and Dominion Energy Virginia) state a dedicated large-load rate class. Every claim links to its page.</dd></div>
+          <div><dt>Result</dt><dd>Only 2 of 8 jurisdictions set a dedicated rate class for large loads. All 36 quotes verified.</dd></div>
+          <div><dt>How</dt><dd class="muted">Compared 11 public energy plans on 8 attributes. A claim counts only if its quote is on the cited page.</dd></div>
         </dl>
-        <p class="origin"><b>Where it started:</b> the state energy-plan assistant from my Hamm Institute internship. <b>Limit:</b> the check proves a quote exists, not that its label is right. Label accuracy is not measured.</p>
+        <p class="origin"><b>Limit:</b> quotes are verified; how each is labeled is not.</p>
         <ul class="chips"><li>Python</li><li>BM25 retrieval</li><li>LLM extraction</li><li>Evidence check</li></ul>
         <div class="ctas">
           <a class="btn primary small" href="https://srikarananand.github.io/Large-Load-Policy-Matrix/" target="_blank" rel="noopener">Read the report</a>
@@ -437,11 +433,10 @@ footer a{color:var(--muted)}
         <p class="tag">Data science · Clustering</p>
         <h3>Fair time benchmarks for unmatched routes</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>42% of a tank-truck carrier's driving segments (about 122K) had no past match, so they had no fair benchmark.</dd></div>
-          <div><dt>What I did</dt><dd>Led the clustering of those one-off segments into 35 peer groups, and ran the benchmarks inside the carrier's SQL database.</dd></div>
-          <div><dt>Result</dt><dd>Benchmark error fell 75% (108 to 28 minutes). A test trip benchmark landed within 1.1% of Google Maps.</dd></div>
+          <div><dt>Result</dt><dd>Benchmark error fell 75% (108 to 28 minutes), within 1.1% of Google Maps on a test trip.</dd></div>
+          <div><dt>How</dt><dd class="muted">Led the clustering of 122K one-off driving segments into 35 peer groups.</dd></div>
         </dl>
-        <p class="origin"><b>Where it started:</b> my Oklahoma State industry capstone, spring 2025, team of four. I redesigned it here as a KPI report.</p>
+        <p class="origin">Oklahoma State industry capstone, team of four.</p>
         <ul class="chips"><li>Python</li><li>scikit-learn</li><li>Fuzzy C-Means</li><li>SQL</li><li>Streamlit</li></ul>
         <div class="ctas">
           <a class="btn primary small" href="https://driverclustering.streamlit.app/" target="_blank" rel="noopener">Open the report</a>
@@ -449,16 +444,14 @@ footer a{color:var(--muted)}
         </div>
       </article>
 
-
       <article class="card proj">
         <p class="tag">Data science · Health survey</p>
         <h3>Language model plus gradient boosting</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>Each positive flag on a health survey triggers outreach, so false alarms cost effort.</dd></div>
-          <div><dt>What I did</dt><dd>Predicted frequent mental distress from the 2023 CDC BRFSS survey (433K respondents). Added a language-model score as one more input to a gradient boosting model. Trained on a 3,000-row sample.</dd></div>
-          <div><dt>Result</dt><dd>On a 750-row hold-out, precision rose from 40.6% to 48.4% (+7.8 points). Predictions are for opt-in outreach only, never for employment or insurance decisions.</dd></div>
+          <div><dt>Result</dt><dd>Precision rose from 40.6% to 48.4% on a 750-row hold-out.</dd></div>
+          <div><dt>How</dt><dd class="muted">Added a language-model score to a gradient boosting model on the 2023 CDC health survey.</dd></div>
         </dl>
-        <p class="origin"><b>Limit:</b> a small hold-out means wide error bars. Treat the gain as promising, not proven.</p>
+        <p class="origin"><b>Limit:</b> small test set. For opt-in outreach only.</p>
         <ul class="chips"><li>Python</li><li>scikit-learn</li><li>DistilBERT</li><li>Parquet</li></ul>
         <div class="ctas">
           <a class="btn primary small" href="https://brfss-ensemble-survey-model.streamlit.app/" target="_blank" rel="noopener">Open the dashboard</a>
@@ -468,13 +461,12 @@ footer a{color:var(--muted)}
 
       <article class="card proj">
         <p class="tag">Case competition · Healthcare</p>
-        <h3>University of Iowa Business Analytics Case Competition, for Wellmark</h3>
+        <h3>Wellmark case competition, University of Iowa</h3>
         <dl class="pbr">
-          <div><dt>Problem</dt><dd>Wellmark needed to plan capacity around Medicaid enrollment and understand what drives healthcare inflation.</dd></div>
-          <div><dt>What I did</dt><dd>Built a SARIMAX forecast of enrollment and a Random Forest ranking of inflation drivers.</dd></div>
-          <div><dt>Result</dt><dd>A way for the client to plan capacity and test scenarios before enrollment shifted. Our team of four did not advance to the final four, out of 16 programs.</dd></div>
+          <div><dt>Result</dt><dd>Team of four. We did not reach the final four of 16 programs.</dd></div>
+          <div><dt>How</dt><dd class="muted">Forecast Medicaid enrollment with SARIMAX and ranked healthcare inflation drivers with a Random Forest.</dd></div>
         </dl>
-        <ul class="chips"><li>SARIMAX</li><li>Random Forest</li><li>Forecasting</li></ul>
+                <ul class="chips"><li>SARIMAX</li><li>Random Forest</li><li>Forecasting</li></ul>
       </article>
 
     </div>
@@ -485,17 +477,16 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">National Champion · Purdue Data4Good Datathon</p>
     <h2>Optimizing TAPS support with automated journey mapping</h2>
-    <p class="intro">Team of four: Srikaran Anand, Edgar Castillo, Bennett Frohock and Josias Hernandez Perez, M.S. Business Analytics and Data Science at Oklahoma State. Our entry, presented on a poster themed "LLMs for Good", won the national championship.</p>
+    <p class="intro">With Edgar Castillo, Bennett Frohock and Josias Hernandez Perez, M.S. Business Analytics and Data Science, Oklahoma State.</p>
 
     <div class="taps">
       <div>
         <dl class="pbr">
-          <div><dt>Challenge</dt><dd>TAPS supports military families grieving a loved one. Staff tracked each survivor's grief journey by hand, which was slow and could leave gaps in care.</dd></div>
-          <div><dt>What we built</dt><dd>A language model reads survivors' emails, calls and texts and answers TAPS's own survey. A Random Forest then places each survivor in one of six phases.</dd></div>
-          <div><dt>Result</dt><dd>Staff can reach out at the right moment, track less by hand, and spot who needs help sooner.</dd></div>
+          <div><dt>Challenge</dt><dd>TAPS staff tracked each grieving military family's journey by hand.</dd></div>
+          <div><dt>Built</dt><dd>A language model reads emails, calls and texts. A Random Forest places each survivor in one of six phases.</dd></div>
+          <div><dt>Result</dt><dd>Staff can reach out at the right moment and spot who needs help sooner.</dd></div>
         </dl>
-        <p class="callout"><b>Why this design:</b> survivors rarely fill in a survey, but they do write and call. A fixed rule cannot read grief or hope in free text, so the language model reads. The phase decision stays with a standard model trained on real survey answers.</p>
-        <p class="callout"><b>Honest read of the results:</b> the 0.94 score is for the survey-based phase classifier. When we hand-checked 30 log entries, the placed phase matched on 19 (63%), and most misses were one phase away.</p>
+        <p class="callout"><b>Honest read:</b> 0.94 F1 is for the survey classifier. A hand-check of 30 log entries matched 19.</p>
       </div>
       <div class="poster">
         <a href="assets/img/data4good-poster.webp" target="_blank" rel="noopener"><img src="assets/img/data4good-poster-960.webp" alt="Our LLMs for Good themed poster for the TAPS project" width="960" loading="lazy"></a>
@@ -507,18 +498,18 @@ footer a{color:var(--muted)}
       <div><b>24,707</b><span>communication log records</span></div>
       <div><b>2,950</b><span>survivor survey responses</span></div>
       <div><b>0.94</b><span>weighted F1, survey phase classifier</span></div>
-      <div><b>23</b><span>survey questions on grief, hope, faith and connectedness</span></div>
+      <div><b>6</b><span>grief journey phases</span></div>
     </div>
 
     <ol class="steps">
-      <li><b>Read</b>Emails, calls and texts from the logs, with phase descriptions as context.</li>
-      <li><b>Extract</b>The model pulls out sentiment, keywords, resources mentioned and phase cues.</li>
-      <li><b>Answer the survey</b>It rates inner strength, faith, emotional state and outlook.</li>
-      <li><b>Classify</b>A Random Forest on 9 survey variables and one engineered feature.</li>
-      <li><b>Map</b>Each survivor's phase over time, updated as new logs arrive.</li>
+      <li><b>Read</b>Emails, calls and texts</li>
+      <li><b>Extract</b>Sentiment and phase cues</li>
+      <li><b>Answer</b>TAPS's own survey</li>
+      <li><b>Classify</b>Random Forest, six phases</li>
+      <li><b>Map</b>Each survivor's phase over time</li>
     </ol>
 
-    <p class="note">The real data has personal information and cannot be shared. The GitHub repo is a rebuild on <b>mock data</b>, so its numbers are lower and are not estimates of real accuracy.</p>
+    <p class="note">The real data is private. The repo is a rebuild on <b>mock data</b>.</p>
     <div class="ctas" style="margin-top:20px">
       <a class="btn primary" href="https://github.com/srikarananand/TAPS-Data4Good" target="_blank" rel="noopener">View mock-data code</a>
     </div>
@@ -529,19 +520,18 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">Research · Co-authored paper, 2025</p>
     <h2>Accepted at three U.S. data conferences</h2>
-    <p class="intro"><b style="color:var(--text);font-weight:500">Constraints-Based Perspective on Land Value Capture Strategies.</b> Srikaran Anand and Rohith Satheesh Nair, M.S. Business Analytics and Data Science, Oklahoma State University.</p>
+    <p class="intro"><b style="color:var(--text);font-weight:500">Constraints-Based Perspective on Land Value Capture Strategies.</b> With Rohith Satheesh Nair, Oklahoma State University.</p>
     <dl class="pbr" style="max-width:760px">
-      <div><dt>Question</dt><dd>New transit raises nearby property values. Could Cook County reclaim part of that gain to pay for transit, and what stands in the way?</dd></div>
-      <div><dt>What we did</dt><dd>Joined parcel assessments with 25 years of CTA ridership, mapped parcels against rail stations, and fit a hedonic pricing model.</dd></div>
-      <div><dt>Conclusion</dt><dd>The uplift is real, but disconnected data is the bottleneck. We proposed open-data agreements and a lightweight predictive model.</dd></div>
+      <div><dt>Question</dt><dd>Could Cook County fund transit from the property-value gains transit creates?</dd></div>
+      <div><dt>Method</dt><dd>Joined parcel data with 25 years of CTA ridership and fit a hedonic pricing model.</dd></div>
+      <div><dt>Answer</dt><dd>The uplift is real. Disconnected data is the bottleneck.</dd></div>
     </dl>
     <div class="findings">
-      <div><b>15–20% higher</b><span>certified values near CTA rail stations, in line with earlier transit studies</span></div>
-      <div><b>About $12.5K less</b><span>assessed value for each mile farther from a station, in the pricing model</span></div>
-      <div><b>8% of parcels</b><span>sit in opportunity-zone tax exemptions, which limits how much value can be captured</span></div>
-      <div><b>Data is the bottleneck</b><span>static parcel records against live ridership, missing station coordinates, and flood data on only 4% of parcels</span></div>
+      <div><b>15–20% higher</b><span>property values near CTA rail stations</span></div>
+      <div><b>About $12.5K less</b><span>assessed value per mile from a station</span></div>
+      <div><b>8% of parcels</b><span>in opportunity-zone tax exemptions</span></div>
+      <div><b>4% of parcels</b><span>have flood data, one of several data gaps</span></div>
     </div>
-    <p class="muted">Why it matters for your team: it is the same work as good BI. Join messy public datasets, model what drives value, and be clear about what the data cannot tell you yet.</p>
   </div>
 </section>
 
@@ -550,16 +540,16 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">Open roles</p>
     <h2>Roles I am open to</h2>
-    <p class="intro">My main focus is business intelligence, data strategy, analytics consulting and AI-enabled analytics. I am also open to data engineering and data science roles. All are full-time or contract, and each is backed by work I have already done.</p>
+    <p class="intro">Main focus: BI, data strategy, analytics consulting and AI-enabled analytics. Also open to data engineering and data science. Full-time or contract.</p>
     <div class="role-list">
-      <div class="role-row"><h3>Business Intelligence Analyst</h3><div><p>Power BI and Tableau reporting that leaders rely on, built on data models I have validated first.</p><ul><li>Replaced an insurer's manual spreadsheet reporting with live Power BI dashboards on claims intake, conversion and cycle times.</li><li>Built SQL-driven Power BI dashboards on vendor and procurement performance for senior Deloitte client stakeholders.</li></ul></div></div>
-      <div class="role-row"><h3>Data Strategy &amp; Analytics Consultant</h3><div><p>I gather requirements, define KPIs and present to senior stakeholders, then make sure the data behind them holds up.</p><ul><li>At Deloitte, turned client questions into KPI definitions, data requirements and reporting specs.</li><li>Presented findings to faculty at Oklahoma State and to researchers at the Hamm Institute.</li><li>Co-authored land value research accepted at 3 U.S. data conferences.</li></ul></div></div>
-      <div class="role-row"><h3>AI-Enabled Analytics</h3><div><p>AI tools that take manual work out of analytics, with checks so people can trust the answers.</p><ul><li>At Accuserve, built a contract-terms assistant and AI agents that cut FP&amp;A data gathering by 72%.</li><li>Built a question layer that routes to approved metrics and declines what it cannot answer, tested on 115 new questions.</li><li>National Champion, Purdue Data4Good Datathon.</li></ul></div></div>
-      <div class="role-row"><h3>Data Engineer</h3><div><p>Pipelines and data models that make reporting and models reliable, from source system to dashboard.</p><ul><li>At Deloitte, worked on the move of an ERP and 8 other sources into one server, with Python pipelines, for <b>35% less</b> data lag.</li><li>Automated Oklahoma State's recurring reporting with Python and pandas, cutting effort by 40%.</li><li>Built a governed metrics layer (SQLite, fixed SQL, a metric dictionary and an MCP server) so every number has an agreed definition.</li></ul></div></div>
-      <div class="role-row"><h3>Data Scientist</h3><div><p>Models that answer a business question, tested honestly and reported with their limits.</p><ul><li>Clustered 122K unmatched driving segments into 35 peer groups, cutting benchmark error by 75%.</li><li>Raised precision by 7.8 points on a health-survey model by adding a language-model score to gradient boosting.</li><li>Built a Random Forest phase classifier for the Data4Good win, and a SARIMAX forecast for a healthcare case competition.</li></ul></div></div>
-      <div class="role-row"><h3>Business Analyst</h3><div><p>Turning a messy process and several source systems into one requirement, one pipeline and one source of truth.</p><ul><li>At Deloitte, worked on the database move that brought an ERP and 8 other sources into one server.</li><li>Built SQL-driven Power BI views on vendor, procurement and distribution metrics.</li></ul></div></div>
-      <div class="role-row"><h3>Data Analyst</h3><div><p>Clean data, careful statistics and recurring reports that run themselves.</p><ul><li>Automated Oklahoma State's recurring program reporting with Python and pandas.</li><li>Owned data quality for asset records covering 5,000+ miles of infrastructure at Deloitte.</li></ul></div></div>
-      <div class="role-row"><h3>FP&amp;A &amp; Finance Analytics</h3><div><p>Budgets, rolling forecasts and variance stories that explain why margin moved, not just that it did.</p><ul><li>Rolling forecasts and monthly variance at Accuserve, tracing margin swings to storm volume, labor and materials.</li><li>Built an AI-assisted pricing forecast and budget model that guided pricing and sped up carrier onboarding.</li></ul></div></div>
+      <div class="role-row"><h3>Business Intelligence Analyst</h3><p>Power BI rollout at Accuserve; executive dashboards at Deloitte.</p></div>
+      <div class="role-row"><h3>Data Strategy &amp; Analytics Consultant</h3><p>Turned Deloitte client questions into KPIs and reporting specs.</p></div>
+      <div class="role-row"><h3>AI-Enabled Analytics</h3><p>AI agents and a contract assistant at Accuserve; a governed KPI question layer.</p></div>
+      <div class="role-row"><h3>Data Engineer</h3><p>Python pipelines at Deloitte; automated reporting at Oklahoma State.</p></div>
+      <div class="role-row"><h3>Data Scientist</h3><p>Clustering, forecasting and classification, each tested on held-out data.</p></div>
+      <div class="role-row"><h3>Business Analyst</h3><p>Requirements and dashboards for Deloitte supply chain clients.</p></div>
+      <div class="role-row"><h3>Data Analyst</h3><p>Data quality for 5,000+ miles of asset records; reports that run themselves.</p></div>
+      <div class="role-row"><h3>FP&amp;A &amp; Finance Analytics</h3><p>Rolling forecasts and variance analysis at Accuserve.</p></div>
     </div>
     <div class="ctas" style="margin-top:28px"><a class="btn primary" href="mailto:srikaran13@gmail.com">Email me about a role</a></div>
   </div>
@@ -569,7 +559,7 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <p class="eyebrow">Skills</p>
     <h2>What I work with</h2>
-    <p class="intro">The main chips are tools and methods I have used hands-on. Open "Also worked with" for similar tools where I use the same skill on another platform.</p>
+    <p class="intro">Hands-on tools first. Similar platforms sit under "Also worked with".</p>
 
     <div class="skill"><h3>Business intelligence and reporting</h3><ul class="chips"><li>Power BI</li><li>Tableau</li><li>DAX</li><li>Power Query</li><li>Excel</li><li>Looker Studio</li><li>SSRS</li><li>OLAP</li><li>Semantic models</li><li>KPI scorecards</li><li>Executive dashboards</li><li>Self-service analytics</li><li>Data storytelling</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>Looker</li><li>Qlik Sense</li><li>MicroStrategy</li><li>Domo</li><li>Sigma</li><li>Hex</li><li>Mode</li><li>Metabase</li><li>Google Sheets</li></ul></details></div>
     <div class="skill"><h3>Data engineering and warehousing</h3><ul class="chips"><li>SQL</li><li>PostgreSQL</li><li>SQL Server</li><li>Oracle</li><li>Snowflake</li><li>Databricks</li><li>dbt</li><li>Airflow</li><li>SSIS</li><li>Alteryx</li><li>KNIME</li><li>NoSQL</li><li>ETL / ELT</li><li>Star-schema modeling</li><li>Data quality and lineage</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>BigQuery</li><li>Redshift</li><li>Azure Synapse</li><li>Fivetran</li><li>Informatica</li><li>Talend</li><li>Apache Spark</li><li>MySQL</li><li>MongoDB</li></ul></details></div>
@@ -578,7 +568,6 @@ footer a{color:var(--muted)}
     <div class="skill"><h3>Cloud, apps and geospatial</h3><ul class="chips"><li>Google Cloud</li><li>Azure</li><li>AWS</li><li>Docker</li><li>Git and GitHub</li><li>REST APIs</li><li>Streamlit</li><li>Power Automate</li><li>Power Apps</li><li>ArcGIS Pro</li><li>QGIS</li><li>Geospatial analysis</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>AWS S3 / Lambda</li><li>Vertex AI</li><li>Azure ML</li><li>Kubernetes</li><li>UiPath</li><li>Zapier</li></ul></details></div>
     <div class="skill"><h3>FP&amp;A and strategic finance</h3><ul class="chips"><li>Budgeting</li><li>Forecasting</li><li>Variance analysis</li><li>P&amp;L analysis</li><li>Driver-based modeling</li><li>Scenario and sensitivity</li><li>Long-range planning</li><li>Capex and opex</li><li>Unit economics</li><li>Pricing analysis</li><li>NPV / IRR / DCF</li><li>Headcount planning</li><li>Month-end close</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>Anaplan</li><li>Adaptive Planning</li><li>Hyperion / Essbase</li><li>SmartView</li><li>Oracle EPM</li><li>SAP BPC</li><li>Planful</li><li>Pigment</li></ul></details></div>
     <div class="skill"><h3>Consulting and business</h3><ul class="chips"><li>Requirements gathering</li><li>Stakeholder management</li><li>Executive presentations</li><li>Project management</li><li>Process improvement</li><li>Business process automation</li><li>Change management</li><li>Vendor operations</li><li>Workforce planning</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>Agile / Scrum</li><li>Jira</li><li>Confluence</li><li>Lean Six Sigma</li><li>Visio</li><li>Lucidchart</li></ul></details></div>
-    <div class="skill"><h3>Industries</h3><ul class="chips"><li>Insurance and catastrophe claims</li><li>Supply chain and procurement</li><li>Energy and utilities</li><li>Transportation and logistics</li><li>Healthcare and public health</li><li>Higher education</li><li>Financial services</li><li>Manufacturing</li><li>E-commerce</li><li>Infrastructure and data centers</li></ul><details><summary>Also worked with</summary><ul class="chips"><li>Retail</li><li>Telecom</li><li>Banking</li><li>Real estate</li><li>CPG</li><li>Media</li></ul></details></div>
   </div>
 </section>
 
@@ -587,14 +576,13 @@ footer a{color:var(--muted)}
     <p class="eyebrow">Industries</p>
     <h2>Industries I know, and where the work carries over</h2>
     <div style="margin-top:32px">
-      <div class="dom"><div><h3>Insurance claims and catastrophe restoration</h3><p class="small">Accuserve</p></div><p>Forecasting and budgeting for demand that swings with storm season: claims intake, conversion, labor and material costs, and carrier onboarding.</p><div><p><small>Carries over to</small>Insurance carriers, seasonal retail, utilities, construction, any business with swinging demand</p></div></div>
-      <div class="dom"><div><h3>Supply chain, procurement and vendor operations</h3><p class="small">Deloitte</p></div><p>Vendor performance, procurement trends and distribution metrics for executives, and data integrity across 5,000+ miles of asset records.</p><div><p><small>Carries over to</small>Manufacturing, consumer goods, retail operations, spend and cost control</p></div></div>
-      <div class="dom"><div><h3>Energy and infrastructure</h3><p class="small">Hamm Institute, S&amp;P Global CERAWeek 2026 NextGen cohort</p></div><p>The first study of starting nuclear power plants in Oklahoma, state energy-plan research, production and consumption benchmarking, and mapping of gas pipelines, data centers and aqueducts.</p><div><p><small>Carries over to</small>Utilities and midstream, renewables, data center development, real assets, public policy</p></div></div>
-      <div class="dom"><div><h3>Transportation and logistics</h3><p class="small">Fair Time Benchmarks</p></div><p>Benchmarking driver and route performance against comparable trips, and estimating times for routes with no history.</p><div><p><small>Carries over to</small>Freight and 3PL, airlines, field service, workforce planning</p></div></div>
-      <div class="dom"><div><h3>Healthcare and public health</h3><p class="small">CDC survey model, Wellmark case, TAPS</p></div><p>A health-survey model built on a 433K-respondent CDC file, Medicaid enrollment forecasting for Wellmark, and the TAPS journey-mapping win for a nonprofit supporting military families.</p><div><p><small>Carries over to</small>Health plans, provider organizations, life sciences, risk scoring, customer analytics</p></div></div>
-      <div class="dom"><div><h3>Higher education</h3><p class="small">Oklahoma State University</p></div><p>Automating recurring reporting and presenting statistical findings on academic outcomes to faculty.</p><div><p><small>Carries over to</small>Universities, research institutes, nonprofits, government agencies</p></div></div>
+      <div class="dom"><div><h3>Insurance claims and restoration</h3><p class="small">Accuserve</p></div><p>Storm-driven demand, claims and costs.</p><div><p><small>Carries over to</small>Insurance, utilities, construction</p></div></div>
+      <div class="dom"><div><h3>Supply chain and procurement</h3><p class="small">Deloitte</p></div><p>Vendor, procurement and distribution metrics.</p><div><p><small>Carries over to</small>Manufacturing, consumer goods, retail</p></div></div>
+      <div class="dom"><div><h3>Energy and infrastructure</h3><p class="small">Hamm Institute, CERAWeek 2026 NextGen</p></div><p>Nuclear power study, state energy plans, infrastructure mapping.</p><div><p><small>Carries over to</small>Utilities, renewables, data centers</p></div></div>
+      <div class="dom"><div><h3>Transportation and logistics</h3><p class="small">Fair Time Benchmarks</p></div><p>Driver and route benchmarks.</p><div><p><small>Carries over to</small>Freight, airlines, field service</p></div></div>
+      <div class="dom"><div><h3>Healthcare and public health</h3><p class="small">CDC survey, Wellmark, TAPS</p></div><p>Survey modeling and enrollment forecasting.</p><div><p><small>Carries over to</small>Health plans, providers, life sciences</p></div></div>
+      <div class="dom"><div><h3>Higher education</h3><p class="small">Oklahoma State University</p></div><p>Automated reporting and outcome analysis.</p><div><p><small>Carries over to</small>Universities, nonprofits, government</p></div></div>
     </div>
-    <p class="callout" style="margin-top:32px">Every industry above runs on the same questions. What will demand look like, what drives cost, where is the variance coming from, and how do we tell leaders quickly. The methods carry over. Only the data changes.</p>
   </div>
 </section>
 
@@ -630,7 +618,7 @@ footer a{color:var(--muted)}
     <div class="contact-box">
       <p class="eyebrow">Contact</p>
       <h2>Let's talk about your data</h2>
-      <p class="muted" style="max-width:62ch;margin-bottom:28px">I am open to business intelligence, data strategy, analytics consulting and AI-enabled analytics roles, and to data engineering and data science roles, full-time or contract. I am U.S. work authorized on OPT (active through July 2027) plus STEM OPT extension, ready to start now, and open to relocation or remote work.</p>
+      <p class="muted" style="max-width:62ch;margin-bottom:28px">Open to BI, analytics consulting, AI analytics, data engineering and data science roles. U.S. work authorized on OPT (active through July 2027) plus STEM OPT extension. Ready to start now, anywhere in the U.S. or remote.</p>
       <div class="ctas">
         <a class="btn primary" href="mailto:srikaran13@gmail.com">Email me</a>
         <a class="btn" href="https://linkedin.com/in/srikarananand" target="_blank" rel="noopener">Message on LinkedIn</a>
